@@ -3,7 +3,8 @@ def my_select(array)
 
  i = 0
  while i < collection.length
-   new_collection << yield (array[i])
+   if yield (array[i]) == true
+   new_collection <<(array[i])
    i += 1
   end
   new_collection
